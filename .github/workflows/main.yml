@@ -67,7 +67,7 @@ jobs:
           # Для каждого пересобранного образа 
           # устанавливаем тег latest, чтобы потом
           # на сервере и в docker-compose.yml не указывать версию
-          tags: 0b10/taski_backend:latest 
+          tags: 0b10/kittygram_backend:latest 
 
 
   frontend_tests:
@@ -110,7 +110,7 @@ jobs:
         with:
           context: ./frontend/
           push: true
-          tags: 0b10/taski_frontend:latest
+          tags: 0b10/kittygram_frontend:latest
 
 
   build_gateway_and_push_to_docker_hub:
@@ -132,4 +132,4 @@ jobs:
           context: ./gateway/
           push: true
           # Тут вместо username должен быть ваш логин на Docker Hub
-          tags: 0b10/taski_gateway:latest
+          tags: 0b10/kittygram_gateway:latest
